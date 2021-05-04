@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Homepage</title>
+        <script src="https://kit.fontawesome.com/08f2861256.js" crossorigin="anonymous"></script>
+        <style>
+            p{
+                color: red;
+            }
+            a{
+                text-decoration: none;
+            }
+            table,tr,th,td{
+                text-align: center;
+                border: 3px solid red;
+                border-collapse: collapse ;
+            }
+            #intro{
+                border: 5px green solid;
+            }
+            #contents{
+                border: 5px purple solid;
+            }
+            #schedule{
+                border: 5px blue solid;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <p>빨간 글자는 모두 안내 문구 이며, p 태그로 작성함</p>
+        
+        <p>각 영역은 div로 구성함</p>
+        
+        <div id="intro">
+            <h5>intro영역</h5>
+            <h1>My Homepage</h1>
+            <img src="/day23_20210430/images/고양이이이.jfif" width="200" height="100" alt=프로그래머그림>
+            <p>똑같은 그림을 쓸 필요는 없음</p>
+            <p>위의 그림 크기는 가로 200px 세로 100px 그림이 뜨지 않을 경우 그림설명문 : 프로그래머 그림</p>
+            <h4>SW 개발자를 꿈꾸며 열심히 공부하고 있습니다.</h4>
+        </div>
+        <div id="contents">
+            <h5>Contents 영역</h5>
+            <h2>현재 관심분야</h2>
+            <ul>
+                <li>jvav<img src="/day23_20210430/images/고양이이이.jfif" width="80"height="50"></li>
+                <p>위의 그림 크기는 가로 80px 세로 50px 로</p>
+                <li>frontend</li>
+                <li>백엔드 개발자</li>
+                <li><a href="https://www.google.co.kr/" target="_blank">구글링</a></li>
+                <p>새창에 구글홈페이지 출력</p>
+                <li><a href="https://www.instagram.com/"target="_black"><i class="fab fa-instagram"></i>아이콘을 클릭하면 인스타그램 홈페이지로 이동 (새창으로)</a></li>
+            </ul>
+        </div>
+            
+        <div id="schedule">
+            <h4>schedule영역</h4>
+            <h2>주요일정</h2>
+            <table>
+                <caption>계획</caption>
+                <tr>
+                    <th>7월</th>
+                    <th>9월</th>
+                    <th>10월</th>
+                </tr>
+                <tr>
+                    <td>프로젝트</td>
+                    <td>수료 및 구직활동</td>
+                    <td>직장인</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

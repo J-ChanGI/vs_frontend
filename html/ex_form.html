@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> form 태그연습</title>
+           <!--제목(btitle), 작성자(bwriter), 비밀번호(bpassword), 내용(bcontents)   
+                카테고리(bcategory) -선택항목은 공부, 여행, 취미(selec이용)
+                전체공개여부 (bopen) - 예 / 아니요 선택(radio이용)  작성한 내용은 boardwrite 라는 주소로 post 방식으로 전송-->
+    </head>
+    <body>
+        <form action="boardwrite" method="post">
+
+            제목 : <input type="text" name="btitle" readonly><br>
+
+            작성자 :  <input type="text" name="bwriter"><br>
+
+            비밀번호 : <input type="password" name="bpassword"><br>
+      
+            내용 : <textarea name="bcontents"></textarea><br>
+
+            카테고리 : <select name="bcategory">
+                <option value="study">공부</option>
+                <option value="travel">여행</option>
+                <option value="hobby">취미</option>
+            </select><br>
+            
+            전체 공개 여부 : <input type="radio" name="bopen" value="yes">예
+            <input type="radio" name="bopen" value="no"> 아니요
+            <input type="submit" value="확인">
+            <button>버튼</button> 
+            
+        </form>
+
+    </body>
+   
+</html>
