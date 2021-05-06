@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{ /* " * "" 의미 현재 html  에 있는 모든 요소 
+                    box-sizing: border-box로 지정하게 되면 테두리를 포함하여 크기가 지정됨 
+                    이렇게 하지 않으면 테두리의 크기를 별도로 계산하게 되어 사이즈가 맞지 앟고 넘치게 되는 경우가 발생함 */
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0; 
+                padding: 0;
+                background-color: gray;
+
+            }
+
+            .header{
+            
+                padding: 30px;
+                text-align: center;
+                background-color: skyblue;
+            }
+            .nav{
+                /* 스크롤을 내릴 때 메뉴가 상단에 고정 */
+                display:inline-block;
+                position: sticky; /* 스크롤을 내릴 때 같이 따라가게 하는 속성 */
+                top: 0; /* 상단 고정 공백을 줄 때 주는 속성 */ 
+                background-color: black;
+                width: 100%;
+            }
+            /* nav 클래스 내부에 있는 a 태그 */
+            .nav a{
+                float: left;
+                color: white;
+                text-align: center;
+                padding: 15px;
+                text-decoration: none; /* text -decoration 은 밑줄 지우는데 활용 */
+            }
+            .nav :hover{
+                background-color: white;
+                color: black;
+            }
+            .left{
+                float: left;
+                width: 75%; 
+                background-color:pink;
+                
+            }
+            .rigth{
+                float: right; 
+                width: 25%;
+                background-color: tan;
+                padding-left: 10px;
+            }
+            .footer{
+                background-color: yellow;
+                text-align: center;
+                padding: 20px;
+                margin-top: 20px;
+            }
+            .imgs{
+                background-color: olive;
+                width: 100%;
+            }
+            .card{
+                background-color: white;
+                padding: 20px;
+                margin-bottom: 10px;
+            }
+            /* float 속성을 해제 하는 역할  */
+            .contents:after{  
+                content: "";
+                display: table;
+                clear:both
+            }
+            /* 화면의 폭이 좁혀졌을 때 1단으로 재배치  
+                미디어 쿼리 브라우저 폭이 700 px 이하일 때 부터 아래내용이 적용됨*/
+            @media screen and (max-width: 700px){
+                .left,
+                .rigth{
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>My Website</h1>
+        </div>
+
+        <div class="nav">
+            <a href="#">메뉴1</a>
+            <a href="#">메뉴2</a>
+            <a href="#">메뉴3</a>
+            <a href="#">메뉴4</a>
+        </div>
+        <div class="contents">
+            <!-- 왼쪽 75% 내용 -->
+            <div class="left">
+                <!-- 왼쪽 단에서 첫번째 내용 -->
+                <div class="card"> 
+                 <h2>left영역</h2>
+                 <h5>제목이 들어갈 자리 , may 6 , 2021</h5>
+                 <div class="imgs" style="height: 200px;">이미지</div>
+                 <p>본문이 들어갑니다</p>
+                 <p>본문 배치 예상</p>
+                </div>
+                <div class="card"> 
+                    <h2>left 두 번째 영역</h2>
+                    <h5>제목이 들어갈 자리 , may 6 , 2021</h5>
+                    <div class="imgs" style="height: 200px;"><img src="/day23_20210430/images/고양이이이.jfif" width="1387px" height="200px"></div>
+                    <p>본문이 들어갑니다</p>
+                    <p>본문 배치 예상</p>
+                   </div>
+            </div>
+            <!-- 오른쪽 25% 내용 -->
+            <div class="rigth">
+                <div class="card">
+                    <h2>자기소개</h2>
+                    <div class="imgs" style="height: 200px;"></div>
+                </div>
+                <div class="card">
+                    <div class="imgs" style="height: 100px;">
+                        <p>이미지가 들어갑니다</p>
+                    </div>
+                    <div class="imgs" style="height: 100px;">
+                        <p>이미지가 들어갑니다</p>
+                    </div>
+                    <div class="imgs" style="height: 100px;">
+                        <p><img src="/day23_20210430/images/고양이이이.jfif" height="100px" width="426px"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>sns계정</h2>
+                    <h3>연락처</h3>
+                </div>
+            </div>
+                        
+            </div>
+        </div>
+
+        <div class="footer">
+            <h1>footer</h1>
+        </div>
+    </body>
+</html>
