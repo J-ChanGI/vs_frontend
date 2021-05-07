@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function test1(){
+                var ele = document.getElementsByClassName('class1');
+                console.log(ele);
+                console.log(ele[0]);
+                console.log(ele[1]);
+
+                var ele1 = document.getElementsByClassName('class1');
+                console.log(ele[0].innerHTML);
+                console.log(ele[1].innerHTML);
+
+                ele1[0].innerHTML ='첫 번째 클래스 내용 변경 ';
+
+                // 태그 요소 접근
+                var ele2 = document.getElementsByTagName('div');
+                console.log(ele2);
+                console.log(ele2[0]);
+                console.log(ele2[1]);
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="test1()">함수호출</button>
+        <div class="class1">
+            class 내용
+
+        </div>
+        <div class="class1">
+            class 내용 2번째
+
+        </div>
+    </body>
+</html>

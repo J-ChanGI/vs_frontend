@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function test1(){
+                console.log ('test1함수');
+                alert('확인을 누르세요');
+                console.log ('확인을 눌러야 출력됨');
+            }
+            function test2(){
+                console.log('test2함수');
+                var a= confirm('컨펌입니다.');
+                console.log(a);
+            }
+            function test3(){
+                console.log('test3함수');
+                var b = prompt('입력을 받아요');
+                console.log(b);
+                alert(b);
+            }
+        </script>
+    </head>
+    <body>
+        <!-- 대화상자 : alert ,  confirm, prompt -->
+        <button onclick="test1()"> alert </button>
+        <button onclick="test2()"> confirm </button>
+        <button onclick="test3()"> prompt </button>
+    </body>
+
+</html>

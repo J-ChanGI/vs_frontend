@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function test1(){
+                // body의 idㅇ 요소에 접근
+                // 현재 문서(document)에 있는 id1 이라는 id를 가진 요소를 사용
+                   
+                console.log(document.getElementById('id1'));
+                
+                var ele = document.getElementById('id1');  // inner html 접근 할 때도  (변수.html 로 가능)
+                console.log(ele);
+                // 위 두 가지는 같다
+                
+                console.log(document.getElementById('id1').innerHTML); //inner HYML  : 태그 내부(시작, 종료 태그사이) 에 접근 
+                
+                console.log(ele.innerHTML);
+                
+                var ele1 = document.getElementById('id1').innerHTML;
+                console.log(ele1);
+                
+                // 위 3가지는 같다
+                
+                document.getElementById('id1').innerHTML = '바뀌는 내용'; // id1 부분의 내용을 변경 / 보여지는 것만 바뀐것 이지 console 까지 바뀌진 않는다.
+                console.log(ele1);
+                // 좌변 과 우변에 있을 때 어떻게 달라지는가 봐야한다.
+                
+            } 
+
+
+
+        </script>
+    </head>
+    <body>
+        <button onclick="test1()">함수호출</button>
+        <div id="id1">
+            id1 영역
+
+        </div>
+    </body>
+</html>

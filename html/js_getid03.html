@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function test1(){
+                // 자바스크립트 배열
+                var arr = ['첫번째' , '두번째', '세번째'];
+                console.log(arr);
+                console.log(arr[0]);
+                console.log(arr[1]);
+                console.log(arr[2]);
+                                
+                // 배열 추가 하기 
+                arr.push("네번째");
+                console.log(arr);
+              
+
+                // 예제 문제  div 영역 텍스트에 기존 텍스트 외 배열 출력하기 
+                var ele1 = document.getElementById('id1');
+
+                var arrprint = "<ul>";
+
+                for(var i=0; i<arr.length; i++){
+                    
+                   arrprint += "<li style = 'color: gray;'>" + arr[i] +"</li>";                     
+                   
+                }    
+                arrprint += "<ul>";
+                document.getElementById('id1').innerHTML=arrprint;       
+            }
+
+        </script>
+    </head>
+    <body>
+        <button onclick="test1()">함수호출</button>
+        <div id="id1">
+            하나아 
+        </div>
+    </body>
+</html>

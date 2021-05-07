@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function test1(){
+                var num1=5, num2=3;
+                var num3= num1*num2;
+                var ele1 = document.getElementById('id2')
+
+                ele1.innerHTML = '<h2>' + num3 + '</h2>';  // num3 값을 h2 태그를 적용하여 id 2 영역에 출력 
+                ele1.innerHTML = '<h2>num3</h2>';  // 텍스트 화 
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="id1">
+              하나아
+        </div>
+        <button onclick="test1()">함수호출</button>
+        <div id="id2">
+              두우울 
+        </div>
+    </body>
+</html>

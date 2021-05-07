@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+          
+            // DOM (Document Objent Model)
+            // 호출이 되는 함수 
+            // 함수 선언
+            function a() {
+                console.log('a함수 호출 됨');    
+            }
+            function b() {
+                console.log('b함수 호출됨');
+                alert('어디에 나올까요?');
+                console.log('나오는 시점은 언제인지');
+            }
+        </script>
+    </head>
+    <body>
+        <!-- script를 호출 -->
+        <!-- 아래 버튼을 클릭 했을 때 a라는 함수 호출 -->
+        <button onclick="b()">함수호출</button>
+    </body>
+</html>
