@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function idcheck(){
+            var exp = /^(?=.*[a-z])(?=.*\d)(?=.*[-_])[a-z\d-_]{5,20}$/ ; 
+            var id = document.getElementById('id').value;
+            var p = document.getElementById('output');
+            
+            if(id.length ==0 ){
+                p.style.color = 'red'
+                p.innerHTML = '필수 정보 입니다.'
+            }else if(id.match(exp)){
+                p.style.color = 'green'
+                p.innerHTML = '멋진 아이디네요'
+            }else{
+                p.style.color = 'red'
+                p.innerHTML = '중복된 아이디거나 , 만들 수 없는 아이디 입니다.'
+            }
+        }
+        function pw(){
+            var exp1 = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/;
+            var pw = document.getElementById('pw').value;
+            var p = document.getElementById('output');
+
+            if(pw.length ==0 ){
+                p.style.color = 'red'
+                p.innerHTML = '필수 정보 입니다'
+            }else if(pw.match(exp1)){
+                p.style.color = 'green'
+                p.innerHTML = '가능한 비밀번호 입니다.'
+            }else{
+                p.style.color = 'red'
+                p.innerHTML = '불가능한 비밀번호 입니다.'
+            }                 
+        }
+        function pw2(){
+            var pw = document.getElementById('pw').value;
+            var pw2 = document.getElementById('pw2').value;
+            var p = document.getElementById('output');
+            if(pw == pw2){
+                p.style.color = 'green'
+                p.innerHTML = '비밀번호가 일치 합니다'
+            }else{
+                p.style.color = 'red'
+                p.innerHTML = '비밀번호가 일치 하지 않습니다.'
+            }
+        }
+    </script>
+</head>
+<body>
+    아이디 : <input type="text" id="id" value="" onblur="idcheck()"><br>
+    비밀번호  : <input type="text" id="pw" value="" onblur="pw()"><br>
+    비밀번호 확인 : <input type="text" id="pw2" value="" onblur="pw2()"><br>
+    <p id="output"></p>
+    
+</body>
+</html>
