@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <script>
+        function pw(){
+            var exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!#$-])[a-zA-Z\d!#$-]{8,18}$/; 
+
+            var pw = document.getElementById('pw').value; 
+
+            var p = document.getElementById('output'); 
+           
+            if(pw.length==0){
+                p.style.color = 'red'
+                p.innerHTML = '필수정보 입니다.'
+
+            }else if(pw.match(exp) ){
+                p.style.color = 'green'
+                p.innerHTML = '유효한 형식 입니다.'
+              
+            }else{
+                p.style.color = 'red'
+                p.innerHTML = '유효하지 않은 형식 입니다.'
+            }
+
+        }
+        function pwcheck(){
+            
+            var pw = document.getElementById('pw').value;
+            var pwcheck = document.getElementById('pwcheck').value; 
+            var p = document.getElementById('output')
+            if(pw == pwcheck){
+                p.style.color = 'green'
+                p.innerHTML = '비밀번호 일치 '
+            }else{
+                p.style.color = 'red'
+                p.innerHTML = '비밀번호 불일치'
+            }
+        }
+
+    </script>
+</head>
+<body>
+    비밀번호 : <input type="text" id="pw" value="" onblur="pw(this.value)" ><br>
+    비밀번호 확인 : <input type="text" id="pwcheck" value="" onblur="pwcheck(this.value)"><br>
+    <p id="output"></p>
+</body>
+</html>

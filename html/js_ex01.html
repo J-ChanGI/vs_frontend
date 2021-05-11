@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(var1){
+            // 입력 값을 가져와서 일치하는지 판단 
+            var ele = document.getElementById('id1').value;
+            var ele2 = document.getElementById('id2').value;
+            var result = document.getElementById('id3');
+            if( ele==ele2){
+                result.style.color = 'green'
+                result.innerHTML = '비밀번호가 일치 합니다.';
+            }else{
+                result.style.color = 'red'
+                result.innerHTML = '비밀번호가 일치 하지 않습니다.';
+            }
+        }
+    </script>
+</head>
+<body>
+    비밀번호 : <input type="text" id="id1" value="" placeholder="비밀번호를 입력하세요"><br>
+    비밀번호 확인 : <input type="text" id="id2" value=""  onkeyup="test1(this.value)">
+    <p id="id3"></p>
+</body>
+</html>

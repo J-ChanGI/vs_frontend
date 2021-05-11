@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            console.log('함수호출')
+        }
+        function test2(){
+            console.log('함수호출')
+            document.getElementById('id3').innerHTML = 
+                document.getElementById('id2').value;
+        }
+        function test3(){
+            console.log("onkeydown 함수호출")
+            document.getElementById('id5').innerHTML = 
+                document.getElementById('id4').value;
+        }
+    </script>
+</head>
+<body>
+    입력1 : <input type="text" id="id1" onchange="test1()"><br> 
+    입력2 : <input type="text" id="id2" onkeyup="test2()"><br>
+    <p id="id3"></p>
+    입력2 : <input type="text" id="id4" onkeydown="test3()"><br>
+    <p id="id5"></p>
+</body>
+</html>

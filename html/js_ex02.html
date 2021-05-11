@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <script>
+        function idcheck(){
+
+            var idcheck = document.getElementById('id').value;
+            var exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/; 
+            var p = document.getElementById('output');
+            if(idcheck.length==0){
+                p.style.color = 'red';
+                p.innerHTML = '필수 정보입니다.'
+            }else if(idcheck.match(exp)){
+                p.style.color = 'green';
+                p.innerHTML = '유효한 형식 입니다'
+            }else{
+                p.style.color = 'red';
+                p.innerHTML = '유효하지 않은 형식 입니다.'
+            }
+
+            
+            
+        }
+            
+           
+    </script>
+
+</head>
+<body>
+    아이디 : <input type="text" id="id" placeholder="영문소문자 , 숫자, 6~ 10글자 " onblur="idcheck()"><br>
+    <button onclick="idcheck()">id정규식 체크</button>
+    <p id="output"></p>
+</body>
+</html>

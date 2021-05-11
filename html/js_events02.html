@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            console.log('test함수호출');
+        }
+        function test2(){
+            console.log('test2함수2호출');
+            document.getElementById('id2').style.backgroundColor='red';
+        }
+        function test3(){
+            console.log('test3함수호출')
+            document.getElementById('id3').style.color='red';
+        }
+        function test4(){
+            console.log('test4함수호출')
+            document.getElementById('id3').style.color='blue'; 
+        }
+          
+        function test5(){
+            var ele  = document.getElementById('id4');
+            ele.style.border = '5px red solid';
+        }
+        function test6(){
+            var ele  = document.getElementById('id4');
+            ele.style.border = '5px blue solid';
+        }
+
+    </script>
+    <style>
+        #id4{
+            background-color:  yellow;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p id="id1" onclick="test1()">내용1</p> 
+    <p id="id2" ondblclick="test2()">내용2</p> <!--더블 클릭을 했을 경우 이벤트 발생 -->
+    <p id="id3" onmousedown="test3()" onmouseup="test4()">내용3</p> <!--onmousedown 마우스로 눌렀을 때 발생하는 이벤트, onmouseup  마우스를 떘을 때 발생하는 이벤트-->
+    
+    <div id="id4" onmouseover="test5()" onmouseout="test6()"> <!--onmouseover 마우스가 올라왔을 때 이벤트가 발생 , onmouseout 마우스가 벗어났을 때 발생하는 이벤트 -->
+        마우스를 들락날락
+    </div>
+</body>
+</html>
